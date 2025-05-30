@@ -1,0 +1,25 @@
+name: Build and Deploy Locally
+
+on:
+  push:
+    branches:
+      - main  # Or your branch
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: docker build -t myapp-image .
+
+    - name: Stop and remove old container (if running)
+      run: |
+        docker stop myapp-container || true
+        docker rm myapp-container || true
+
+    - name: Run Docker container
+      run: docker run -d -p 80:80 --name myapp-container myapp-image
