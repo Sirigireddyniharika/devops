@@ -22,4 +22,5 @@ jobs:
         docker rm myapp-container || true
 
     - name: Run Docker container
-      run: docker run -d -p 80:80 --name myapp-container myapp-image
+      run: docker run -d -p 8080:80 --name myapp-container myapp-image
+
