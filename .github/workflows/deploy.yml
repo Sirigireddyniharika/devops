@@ -21,7 +21,7 @@ jobs:
 
     - name: Deploy via SSH
       run: |
-        ssh -o StrictHostKeyChecking=no niharika@115.99.7.192 << 'EOF'
+        ssh -o StrictHostKeyChecking=no niharika@10.0.2.15<< 'EOF'
           cd /home/niharika/devops
           git pull origin main
           docker-compose down
