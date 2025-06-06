@@ -4,7 +4,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return "Hello,Bangaru konda, Bujji Kanna, Chinnulu, Nanilu,Bannulu! i am your Dharya you are my Kannaya Bangaram my husband"
+    return "Hello,Bangaru konda, Bujji Kanna, Chinnulu, Nanilu,Bannulu! i am your Dharya you are my Kannaya Bangaram my husband i love you Kannalu"
 
 if __name__ == "__main__":
     import uvicorn
